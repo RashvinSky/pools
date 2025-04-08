@@ -66,15 +66,28 @@
 				<div class="col-lg-9">
 					<div class="topbar-items">
 						<ul>
-							<li><i class="bi bi-geo-alt"></i> <a href="#">257 gold street brooklyn new york</a></li>
-							<li><i class="bi bi-calendar4-week"></i> <a href="#">Thursday Mar 27. 2024</a></li>
-							<li><i class="bi bi-envelope"></i> <a href="#">emaple@gmail.com</a></li>
+							<li><i class="bi bi-geo-alt"></i> 
+								<a href="#" data-i18n="topbar_address">2184 St Peter Avenue, Bathurst, NB</a>
+							  </li>
+							  <li><i class="bi bi-telephone-fill"></i> 
+								<a href="#" data-i18n="topbar_date">506.546.5396</a>
+							  </li>
+							  <li><i class="bi bi-messenger"></i> 
+								<a href="#" data-i18n="topbar_email">506.307.6562</a>
+							  </li>
+													  
+							<li class="language-selector">
+								<select id="languageSwitcher">
+									<option value="en">English</option>
+									<option value="fr">Français</option>
+								</select>
+							</li>
 						</ul>
 					</div>
 				</div>
 				<div class="col-lg-3">
 					<div class="topbar-social">
-						<h4>Follow on:</h4>
+						<h4 data-i18n="follow_on">Follow on:</h4>
 						<ul>
 							<li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
 							<li><a href="#"><i class="fab fa-youtube"></i></a></li>
@@ -105,20 +118,28 @@
 				<div class="col-lg-9">
 					<div class="header-menu">
 						<ul class="d-flex flex-nowrap">
-							<li><a href="index.html">Home</a></li>
-							<li><a href="#service">Services</a></li>
-							<li><a href="#about">About</a></li>
-							<li><a href="#team">Team</a></li>
-							<li><a href="#protfolio">Project</a></li>
-							<li><a href="contact.html">Contacts</a></li>
+							<li><a href="index.html" data-i18n="menu_home">Home</a></li>
+							<li><a href="#service" data-i18n="menu_services">Services</a></li>
+							<li><a href="#about" data-i18n="menu_about">About</a></li>
+							<li><a href="#team" data-i18n="menu_team">Team</a></li>
+							<li><a href="#protfolio" data-i18n="menu_project">Project</a></li>
+							<li><a href="contact.html" data-i18n="menu_contacts">Contacts</a></li>
+							<!-- <li>
+								<a class="search-box-btn search-box-outer" href="#" data-i18n="menu_search" title="Search">
+									<i class="bi bi-search"></i>
+								</a>
+							</li> -->
+
 							<li><a class="search-box-btn search-box-outer" href="#"><i class="bi bi-search"></i></a>
 							</li>
 						</ul>
 						<div class="Pools-btn">
-							<a href="https://aqua-edge-solutions.com/Jcpools/Patrol/" target="_blank">Subscribe Here <i class="bi bi-arrow-right"></i></a>
+							<a href="https://aqua-edge-solutions.com/Jcpools/Patrol/" target="_blank" data-i18n="menu_subscribe">
+								Subscribe Here <i class="bi bi-arrow-right"></i>
+							</a>
 						</div>
 					</div>
-				</div>
+				</div>				
 			</div>
 		</div>
 	</header>
@@ -269,11 +290,6 @@
 	<!-- End Service Details Area -->
 	<!--==================================================-->
 
-
-
-
-
-	
 	<!--==================================================-->
 	<!-- Start Sidebar Area -->
 	<!--==================================================-->
@@ -289,65 +305,31 @@
 					<div class="sidebar-info-contents">
 						<div class="content-inner">
 							<div class="sidebar-logo">
-								<a href="index.html"><img src="assets/images/logo.png" alt="logo"></a>
+								<a href="index.html"><img class="" src="assets/images/logo.png" alt="logo"></a>
 							</div>
 							<div class="sidebar-widget-menu">
 								<ul>
-									<li class="dropdown"><a href="#" data-toggle="dropdown">Home <i
-												class="icon-arrow"></i></a>
-										<ul class="dropdown-menu">
-											<li><a href="index.html">Home</a></li>
-											<li><a href="index-two.html">Home Landing</a></li>
-											<li><a href="index-video.html">Home Video</a></li>
-										</ul>
-									</li>
-									<li class="dropdown"><a href="about" data-toggle="dropdown">About</a></li>
-									<li class="dropdown"><a href="#" data-toggle="dropdown">Service <i
-												class="icon-arrow"></i></a>
-										<ul class="dropdown-menu">
-											<li><a href="service.html">Service</a></li>
-											<li><a href="service-details.html">Service Details</a></li>
-										</ul>
-									</li>
-									<li class="dropdown"><a href="#" data-toggle="dropdown">Pages <i
-												class="icon-arrow"></i></a>
-										<ul class="dropdown-menu">
-											<li><a href="about.html">About</a></li>
-											<li><a href="team.html">Team</a></li>
-											<li><a href="team-detials.html">Team Details</a></li>
-											<li><a href="project-grid.html">Project</a></li>
-											<li><a href="projects-details.html">Project Details</a></li>
-											<li><a href="faq.html">Faq Page</a></li>
-											<li><a href="contact.html">Contact</a></li>
-											<li><a href="error.html">Error Page</a></li>
-										</ul>
-									</li>
-									<li class="dropdown"><a href="#" data-toggle="dropdown">News <i
-												class="icon-arrow"></i></a>
-										<ul class="dropdown-menu">
-											<li><a href="blog.html">News</a></li>
-											<li><a href="blog-details.html">News Details</a></li>
-										</ul>
-									</li>
-									<li class="dropdown"><a href="contact.html" data-toggle="dropdown">Contact</a></li>
+									<li class="dropdown"><a href="index.html" data-toggle="dropdown" data-i18n="menu_home">Home</a></li>
+									<li class="dropdown"><a href="#service" data-toggle="dropdown" data-i18n="menu_service">Service</a></li>
+									<li class="dropdown"><a href="#about" data-toggle="dropdown" data-i18n="menu_about">About</a></li>
+									<li class="dropdown"><a href="#team" data-toggle="dropdown" data-i18n="menu_team">Team</a></li>
+									<li class="dropdown"><a href="#protfolio" data-toggle="dropdown" data-i18n="menu_project">Project</a></li>
+									<li class="dropdown"><a href="contact.html" data-toggle="dropdown" data-i18n="menu_contact">Contact</a></li>
 								</ul>
 							</div>
 							<div class="contact-info">
-								<h2>Contact Info</h2>
+								<h2 data-i18n="sidebar_contactinfo_title">Contact Info</h2>
 								<ul class="list-style-one">
-									<li><i class="bi bi-geo-alt-fill"></i>6391 Elgin St. Celina, Delaware</li>
-									<li><i class="bi bi-telephone-fill"></i>(+001) 123-456-789</li>
-									<li><i class="bi bi-envelope"></i> info@example.com</li>
-									<li><i class="bi bi-alarm-fill"></i> Week Days: 08.00 to 10.00
-									</li>
+									<li><i class="bi bi-geo-alt-fill"></i> <span data-i18n="topbar_address">2184 St Peter Avenue, Bathurst, NB</span></li>
+									<li><i class="bi bi-telephone-fill"></i> <span data-i18n="topbar_date">506.546.5396</span></li>
+									<li><i class="bi bi-messenger"></i> <span data-i18n="topbar_email">506.307.6562</span></li>
 								</ul>
 							</div>
 							<ul class="social-box">
 								<li class="facebook"><a href="#" class="fab fa-facebook-f"></a></li>
+								<li class="linkedin"><a href="#" class="fab fa-youtube"></a></li>
+								<li class="linkedin"><a href="#" class="fab fa-tiktok"></a></li>
 								<li class="twitter"><a href="#" class="fab fa-instagram"></a></li>
-								<li class="linkedin"><a href="#" class="fab fa-twitter"></a></li>
-								<li class="instagram"><a href="#" class="fab fa-pinterest-p"></a></li>
-								<li class="youtube"><a href="#" class="fab fa-linkedin-in"></a></li>
 							</ul>
 						</div>
 					</div>
@@ -355,6 +337,7 @@
 			</div>
 		</div>
 	</div>
+	
 	<!--==================================================-->
 	<!-- End Sidebar Area -->
 	<!--==================================================-->
@@ -364,85 +347,84 @@
 	<!--==================================================-->
 	<div class="footer-area">
 		<div class="container">
-			<div class="row">
-				<div class="col-lg-3"></div>
-				<div class="col-lg-3 col-md-6">
-					<div class="footer-wiget wow fadeInUp" data-wow-delay="0.2s" data-wow-duration="1s">
-						<div class="footer-wiget-log">
-							<a href="index.html"><img src="assets/images/logo.png" alt=""></a>
-						</div>
-						<div class="footer-wiget-text">
-							<h4>Feugiat a ligula rutrum luctus primis ultrice nteger congue magna at pretium purus a
-								pretium ligula rutrum and luctus</h4>
-						</div>
-						<div class="footer-socilal-title">
-							<h4>Social Info</h4>
-						</div>
-						<div class="footer-social">
-							<ul>
-								<li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-								<li><a href="#"><i class="fab fa-youtube"></i></a></li>
-								<li><a href="#"><i class="fab fa-tiktok"></i></a></li>
-								<li><a href="#"><i class="fab fa-instagram"></i></a></li>
-							</ul>
-						</div>
-					</div>
+		  <div class="row">
+			<div class="col-lg-3"></div>
+			<div class="col-lg-3 col-md-6">
+			  <div class="footer-wiget wow fadeInUp" data-wow-delay="0.2s" data-wow-duration="1s">
+				<div class="footer-wiget-log">
+				  <a href="index.html"><img src="assets/images/logo.png" alt=""></a>
 				</div>
-				<div class="col-lg-3 col-md-6">
-					<div class="footer-wiget wow fadeInUp" data-wow-delay="0.4s" data-wow-duration="1s">
-						<div class="footer-wiget-title">
-							<h4>Resources</h4>
-						</div>
-						<div class="footer-wiget-menu">
-							<ul>
-								<li><a href="#">Support</a></li>
-								<li><a href="#">Video Guides</a></li>
-							</ul>
-						</div>
-					</div>
+				<div class="footer-wiget-text">
+				  <h4 data-i18n="footer_description"></h4>
 				</div>
-				<div class="col-lg-3 col-md-6">
-					<div class="footer-wiget wow fadeInUp" data-wow-delay="0.6s" data-wow-duration="1s">
-						<div class="footer-wiget-title">
-							<h4>Get In Touch</h4>
-						</div>
-						<div class="footer-wiget-menu">
-							<ul>
-								<li><a href="#">Valentin, Street Road 242</a></li>
-								<li><a href="#">(+02) 574 - 328 - 301</a></li>
-								<li><a href="#">Blog Classic</a></li>
-								<li><a href="#">example@gmail.com</a></li>
-
-							</ul>
-						</div>
-					</div>
+				<div class="footer-socilal-title">
+				  <h4 data-i18n="footer_social_title"></h4>
 				</div>
-				<div class="row align-items-center mt-90">
-					<div class="col-lg-3"></div>
-					<div class="col-lg-5 col-md-12">
-						<div class="copyright-text">
-							<p>© 2023 - 2025 | Alrights reserved by <a
-									href="https://www.templatemonster.com/authors/techtime/">Tech-Time</a></p>
-						</div>
-					</div>
-					<div class="col-lg-4 col-md-12">
-						<div class="footer-privacy-menu">
-							<ul>
-								<li><a href="#">Terms</a></li>
-								<li><a href="#">Privacy</a></li>
-								<li><a href="#">License</a></li>
-								<li><a href="#">Privacy Policy</a></li>
-							</ul>
-						</div>
-					</div>
+				<div class="footer-social">
+				  <ul>
+					<li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+					<li><a href="#"><i class="fab fa-youtube"></i></a></li>
+					<li><a href="#"><i class="fab fa-tiktok"></i></a></li>
+					<li><a href="#"><i class="fab fa-instagram"></i></a></li>
+				  </ul>
 				</div>
+			  </div>
 			</div>
+			<div class="col-lg-3 col-md-6">
+			  <div class="footer-wiget wow fadeInUp" data-wow-delay="0.4s" data-wow-duration="1s">
+				<div class="footer-wiget-title">
+				  <h4 data-i18n="footer_resources_title"></h4>
+				</div>
+				<div class="footer-wiget-menu">
+				  <ul>
+					<li><a href="#" data-i18n="footer_support"></a></li>
+					<li><a href="#" data-i18n="footer_video_guides"></a></li>
+				  </ul>
+				</div>
+			  </div>
+			</div>
+			<div class="col-lg-3 col-md-6">
+			  <div class="footer-wiget wow fadeInUp" data-wow-delay="0.6s" data-wow-duration="1s">
+				<div class="footer-wiget-title">
+				  <h4 data-i18n="footer_contact_title"></h4>
+				</div>
+				<div class="footer-wiget-menu">
+				  <ul>
+					<li><a href="#"><i class="bi bi-geo-alt-fill"></i> <span data-i18n="footer_address"></span></a></li>
+					<li><a href="#"><i class="bi bi-telephone-fill"></i> <span data-i18n="footer_phone_1"></span></a></li>
+					<li><a href="#"><i class="bi bi-messenger"></i> <span data-i18n="footer_phone_2"></span></a></li>
+					<li><a href="#"><i class="bi bi-envelope-fill"></i> <span data-i18n="footer_email"></span></a></li>
+				  </ul>
+				</div>
+			  </div>
+			</div>
+	  
+			<div class="row align-items-center mt-90">
+			  <div class="col-lg-3"></div>
+			  <div class="col-lg-5 col-md-12">
+				<div class="copyright-text">
+				  <p data-i18n="footer_copyright"></p>
+				</div>
+			  </div>
+			  <div class="col-lg-4 col-md-12">
+				<div class="footer-privacy-menu">
+				  <ul>
+					<li><a href="#" data-i18n="footer_terms"></a></li>
+					<li><a href="#" data-i18n="footer_privacy"></a></li>
+					<li><a href="#" data-i18n="footer_license"></a></li>
+					<li><a href="#" data-i18n="footer_privacy_policy"></a></li>
+				  </ul>
+				</div>
+			  </div>
+			</div>
+		  </div>
 		</div>
-	</div>
+	  </div>
+	  
 	<!--==================================================-->
 	<!-- End Footer Area -->
 	<!--==================================================-->
-	
+
 	<!--==================================================-->
 	<!-- Start Search Popup Area -->
 	<!--==================================================-->
@@ -474,6 +456,7 @@
 	<!--==================================================-->
 	<!-- End scrollup section Area -->
 	<!--==================================================-->
+
 
 
 	<!-- jquery js -->

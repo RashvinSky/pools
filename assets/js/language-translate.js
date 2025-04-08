@@ -93,7 +93,20 @@ const translations = {
     footer_terms: "Terms",
     footer_privacy: "Privacy",
     footer_license: "License",
-    footer_privacy_policy: "Privacy Policy"
+    footer_privacy_policy: "Privacy Policy",
+    contact_info_title: "Contact Information",
+    address_title: "Address",
+    contact_number_title: "Contact Number",
+    email_us_title: "Email Us",
+    get_quote_title: "Get A Quote",
+    your_name: "Your Name",
+    email_address: "Email Address",
+    phone_number: "Phone Number",
+    website: "Website",
+    company_name: "Your Company Name",
+    question_placeholder: "Write your question here",
+    get_quote_button: "Get a quote",
+    contact_page_title: "Contact",
   },
   fr: {
     page_title: "Bubble Patrol : votre solution sans stress",
@@ -189,47 +202,48 @@ const translations = {
     footer_privacy: "Confidentialité",
     footer_license: "Licence",
     footer_privacy_policy: "Politique de confidentialité",
-    footer_copyright: "© 2025 - 2026 | Tous droits réservés par Aqua-Edge-Solutions"
+    footer_copyright: "© 2025 - 2026 | Tous droits réservés par Aqua-Edge-Solutions",
+    contact_info_title: "Informations de contact",
+    address_title: "Adresse",
+    contact_number_title: "Numéro de contact",
+    email_us_title: "Nous écrire",
+    get_quote_title: "Obtenez un devis",
+    your_name: "Votre nom",
+    email_address: "Adresse e-mail",
+    phone_number: "Numéro de téléphone",
+    website: "Site Web",
+    company_name: "Nom de votre entreprise",
+    question_placeholder: "Écrivez votre question ici",
+    get_quote_button: "Obtenez un devis",
+    contact_page_title: "Contact",
   }
 };
 
 
-  // const switchLanguage = (lang) => {
-  //   document.querySelectorAll('[data-i18n]').forEach((el) => {
-  //     const key = el.getAttribute('data-i18n');
-  //     if (translations[lang] && translations[lang][key]) {
-  //       el.innerText = translations[lang][key];
-  //     }
-  //   });
-  // };
+const switchLanguage = (lang) => {
+  document.querySelectorAll("[data-i18n]").forEach((el) => {
+    const key = el.getAttribute("data-i18n");
+    if (translations[lang] && translations[lang][key]) {
+      el.innerText = translations[lang][key];
+    }
+  });
 
-  // document.getElementById('languageSwitcher').addEventListener('change', function () {
-  //   switchLanguage(this.value);
-  // });
-  // // Set default language
-  // switchLanguage('en');
-  
+  // 👇 Update body class for language-specific styling
+  document.body.classList.remove("lang-en", "lang-fr");
+  document.body.classList.add(`lang-${lang}`);
+};
 
-  const switchLanguage = (lang) => {
-    document.querySelectorAll("[data-i18n]").forEach((el) => {
-      const key = el.getAttribute("data-i18n");
-      if (translations[lang] && translations[lang][key]) {
-        el.innerText = translations[lang][key];
-      }
-    });
-  };
+// Attach change listener to all language switchers
+document.querySelectorAll(".languageSwitcher").forEach((switcher) => {
+  switcher.addEventListener("change", function () {
+    switchLanguage(this.value);
 
-  // Attach change listener to all language switchers
-  document.querySelectorAll(".languageSwitcher").forEach((switcher) => {
-    switcher.addEventListener("change", function () {
-      switchLanguage(this.value);
-
-      // Optional: update all language switchers to reflect the same selected language
-      document.querySelectorAll(".languageSwitcher").forEach((el) => {
-        el.value = this.value;
-      });
+    // Optional: update all language switchers to reflect the same selected language
+    document.querySelectorAll(".languageSwitcher").forEach((el) => {
+      el.value = this.value;
     });
   });
+});
 
   // Set default language
   switchLanguage("en");

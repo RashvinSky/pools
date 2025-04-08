@@ -3652,3 +3652,11 @@ span.flaticon-multiply i {
     color: black;
 }
 
+.lang-fr .bratcome-text ul li a::before {
+  left: 79px;
+}
+
+.lang-en .bratcome-text ul li a::before {
+   left: 62px;
+}
+  
