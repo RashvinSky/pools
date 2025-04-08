@@ -1270,13 +1270,27 @@ video.video-background {
 ===================================================*/
 
 .contact-us-area {
+    position: relative;
     background: url(../latestImages/Picture\ 07\ -\ Landing\ Page.jpg);
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
     padding: 120px 0 50px;
+    z-index: 1;
+    color: white; 
 }
 
+.contact-us-area::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* black with 50% opacity */
+    z-index: -1; /* sits behind the text */
+  }
+  
 /* contact us btn */
 
 .Pools-btn.contact {
@@ -3659,4 +3673,7 @@ span.flaticon-multiply i {
 .lang-en .bratcome-text ul li a::before {
    left: 62px;
 }
-  
+.section-main-title.contact h4{
+    color: white;
+    font-size: 22px;
+}
