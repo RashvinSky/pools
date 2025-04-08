@@ -3033,7 +3033,7 @@ button.icons {
 
 .sidebar-group .widget-heading {
     position: absolute;
-    top: 90px;
+    top: 51px;
     right: 32px;
 }
 
@@ -3100,9 +3100,9 @@ button.icons {
     margin: 0 0 50px;
 }
 
-.sidebar-textwidget .sidebar-logo a img {
+/* .sidebar-textwidget .sidebar-logo a img {
     width: 50%;
-}
+} */
 
 .sidebar-group .about-box h2 {
     color: #fff;
@@ -3646,4 +3646,8 @@ span.flaticon-multiply i {
     padding: 5px 10px;
     border-radius: 4px;
     cursor: pointer;
+}
+
+.language-selector select option{
+    color: black;
 }
