@@ -194,18 +194,42 @@ const translations = {
 };
 
 
+  // const switchLanguage = (lang) => {
+  //   document.querySelectorAll('[data-i18n]').forEach((el) => {
+  //     const key = el.getAttribute('data-i18n');
+  //     if (translations[lang] && translations[lang][key]) {
+  //       el.innerText = translations[lang][key];
+  //     }
+  //   });
+  // };
+
+  // document.getElementById('languageSwitcher').addEventListener('change', function () {
+  //   switchLanguage(this.value);
+  // });
+  // // Set default language
+  // switchLanguage('en');
+  
+
   const switchLanguage = (lang) => {
-    document.querySelectorAll('[data-i18n]').forEach((el) => {
-      const key = el.getAttribute('data-i18n');
+    document.querySelectorAll("[data-i18n]").forEach((el) => {
+      const key = el.getAttribute("data-i18n");
       if (translations[lang] && translations[lang][key]) {
         el.innerText = translations[lang][key];
       }
     });
   };
 
-  document.getElementById('languageSwitcher').addEventListener('change', function () {
-    switchLanguage(this.value);
+  // Attach change listener to all language switchers
+  document.querySelectorAll(".languageSwitcher").forEach((switcher) => {
+    switcher.addEventListener("change", function () {
+      switchLanguage(this.value);
+
+      // Optional: update all language switchers to reflect the same selected language
+      document.querySelectorAll(".languageSwitcher").forEach((el) => {
+        el.value = this.value;
+      });
+    });
   });
 
   // Set default language
-  switchLanguage('en');
+  switchLanguage("en");
