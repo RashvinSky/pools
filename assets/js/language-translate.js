@@ -222,14 +222,28 @@ const translations = {
 
 
 const switchLanguage = (lang) => {
+  localStorage.setItem("selectedLanguage", lang);
+  
   document.querySelectorAll("[data-i18n]").forEach((el) => {
-    const key = el.getAttribute("data-i18n");
-    if (translations[lang] && translations[lang][key]) {
-      el.innerText = translations[lang][key];
+    const i18nValue = el.getAttribute("data-i18n");
+
+    // Check for attribute binding like [placeholder]key
+    const attrMatch = i18nValue.match(/^\[(.+)\](.+)$/);
+    if (attrMatch) {
+      const attr = attrMatch[1]; // e.g., "placeholder"
+      const key = attrMatch[2]; // e.g., "your_name"
+      if (translations[lang] && translations[lang][key]) {
+        el.setAttribute(attr, translations[lang][key]);
+      }
+    } else {
+      // Default: innerText replacement
+      if (translations[lang] && translations[lang][i18nValue]) {
+        el.innerText = translations[lang][i18nValue];
+      }
     }
   });
 
-  // 👇 Update body class for language-specific styling
+  // Optional: update body class for styling
   document.body.classList.remove("lang-en", "lang-fr");
   document.body.classList.add(`lang-${lang}`);
 };
@@ -246,5 +260,9 @@ document.querySelectorAll(".languageSwitcher").forEach((switcher) => {
   });
 });
 
-  // Set default language
-  switchLanguage("en");
+ // On page load: use saved language or default to English
+ const savedLang = localStorage.getItem("selectedLanguage") || "en";
+ switchLanguage(savedLang);
+ document.querySelectorAll(".languageSwitcher").forEach((el) => {
+   el.value = savedLang;
+ });
