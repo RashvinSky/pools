@@ -1451,7 +1451,7 @@ video.video-background {
     content: "";
     width: 25%;
     height: 100%;
-    background: url(../images/footer/footer-thumb.png);
+    background: url(../images/footer/footer-thumb-img.png);
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
