@@ -104,6 +104,18 @@ const translations = {
     question_placeholder: "Write your question here",
     get_quote_button: "Get a quote",
     contact_page_title: "Contact",
+    menu_team_details: "Team Details",
+    success_rate: "Success Rate",
+    complete_work: "Complete Work",
+    satisfied_client: "Satisfied Client",
+    label_name: "Name :",
+    label_position: "Position :",
+    position_logistics: "Logistics",
+    label_experience: "Experience :",
+    label_years: "Years",
+    label_phone: "Phone :",
+    label_email: "Email :",
+    label_address: "Address :"
   },
   fr: {
     page_title: "Bubble Patrol : Votre solution sans stress",
@@ -210,6 +222,18 @@ const translations = {
     question_placeholder: "Écrivez votre question ici",
     get_quote_button: "Obtenir un devis",
     contact_page_title: "Contact",
+    menu_team_details: "Détails de l'équipe",
+    success_rate: "Taux de réussite",
+    complete_work: "Travail terminé",
+    satisfied_client: "Client satisfait",
+    label_name: "Nom :",
+    label_position: "Poste :",
+    position_logistics: "Logistique",
+    label_experience: "Expérience :",
+    label_years: "Ans",
+    label_phone: "Téléphone :",
+    label_email: "Email :",
+    label_address: "Adresse :"
   }
   
 };
