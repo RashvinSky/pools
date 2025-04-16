@@ -28,8 +28,8 @@ const translations = {
     service_3_desc: "A hassle-free pool care package with on-site testing, balancing, and backwash when needed. Special two-visit Pool Opening rates — enjoy clear water easily!",
     join_now: "Join Now +",
     about_section_title: "About Bubble Patrol",
-    about_section_subtitle: "Water Care Made Simple: 3 Options, One Easy Choice.",
-    about_section_description: "At Bubble Patrol, we make pool and hot tub care effortless with our home service across North Eastern NB. Our goal is to leave you completely satisfied, knowing you made the right choice in trusting us to keep your water safe and clear, so you can relax and enjoy.",
+    about_section_subtitle: "Pool Opening Special Offer!",
+    about_section_description: "At JC Pools, our core values are simple: customer satisfaction, respect, and genuine happiness. Since 1989, these principles have guided everything we do—from pool and hot tub care to every interaction with our clients. <br /><br /> We believe in building lasting relationships and staying at the forefront of service so we can keep finding better ways to serve you. Your peace of mind matters to us.<br /><br /> That’s why we created <strong>Bubble Patrol</strong>—a personalized service designed to raise the bar for your comfort, satisfaction, and joy.",
     about_point_1: "Convenient, at Home Service",
     about_point_2: "Serving North East NB",
     about_point_3: "Trusted Mineraluxe & Dazzle Products",
@@ -146,8 +146,8 @@ const translations = {
     service_3_desc: "Un service de piscine sans tracas avec tests sur place, équilibrage, et lavage à contre-courant si nécessaire. Tarifs spéciaux pour l’ouverture de piscine avec deux visites — profitez d'une eau claire facilement !",
     join_now: "Inscrivez-vous +",
     about_section_title: "À propos de Bubble Patrol",
-    about_section_subtitle: "Entretien de l'eau simplifié : 3 options, un choix facile.",
-    about_section_description: "Chez Bubble Patrol, nous rendons l’entretien des piscines et spas facile grâce à notre service à domicile dans le Nord-Est du Nouveau-Brunswick. Notre objectif est de vous satisfaire pleinement, en vous assurant que vous avez fait le bon choix en nous confiant l'entretien de votre eau, pour que vous puissiez vous détendre et en profiter.",
+    about_section_subtitle: "Offre spéciale ouverture de la piscine !",
+    about_section_description: "Chez JC Pools, nos valeurs fondamentales sont simples : la satisfaction client, le respect et un bonheur authentique. Depuis 1989, ces principes guident tout ce que nous faisons, de l'entretien de vos piscines et spas à chacune de nos interactions avec nos clients. <br /><br /> Nous croyons en l'importance de bâtir des relations durables et de rester à la pointe du service afin de toujours mieux vous servir. Votre tranquillité d'esprit est notre priorité.<br /><br /> C'est pourquoi nous avons créé <strong>Bubble Patrol</strong>, un service personnalisé conçu pour vous offrir un confort, une satisfaction et un plaisir optimaux.",
     about_point_1: "Service pratique à domicile",
     about_point_2: "Dessert le Nord-Est du NB",
     about_point_3: "Produits de confiance : Mineraluxe & Dazzle",
@@ -256,7 +256,7 @@ const switchLanguage = (lang) => {
     } else {
       // Default: innerText replacement
       if (translations[lang] && translations[lang][i18nValue]) {
-        el.innerText = translations[lang][i18nValue];
+        el.innerHTML = translations[lang][i18nValue];
       }
     }
   });
@@ -284,3 +284,6 @@ document.querySelectorAll(".languageSwitcher").forEach((switcher) => {
  document.querySelectorAll(".languageSwitcher").forEach((el) => {
    el.value = savedLang;
  });
+
+
+ 

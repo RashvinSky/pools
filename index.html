@@ -91,7 +91,6 @@
 						<ul>
 							<li><a href="https://www.facebook.com/piscinesJC/" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
 							<li><a href="https://www.youtube.com/@SpaWater-ca" target="_blank"><i class="fab fa-youtube" ></i></a></li>
-							<li><a href="#"><i class="fab fa-tiktok"></i></a></li>
 							<li><a href="#"><i class="fab fa-instagram"></i></a></li>
 						</ul>
 					</div>
@@ -438,10 +437,6 @@
 						</div>
 						<div class="about-discription wow fadeInUp" data-wow-delay="0.8s" data-wow-duration="1s">
 							<p data-i18n="about_section_description">
-								At Bubble Patrol, we make pool and hot tub care effortless with our home service across
-								North Eastern NB. Our goal is to leave you completely satisfied, knowing you made the
-								right choice in trusting us to keep your water safe and clear, so you can relax and
-								enjoy.
 							</p>
 						</div>
 						<div class="row about-border">
@@ -569,7 +564,6 @@
 								<ul>
 									<li><a href="https://www.facebook.com/piscinesJC/" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
 									<li><a href="https://www.youtube.com/@SpaWater-ca" target="_blank"><i class="fab fa-youtube" ></i></a></li>
-									<li><a href="#"><i class="fab fa-tiktok"></i></a></li>
 									<li><a href="#"><i class="fab fa-instagram"></i></a></li>
 								</ul>
 							</div>
@@ -592,7 +586,6 @@
 								<ul>
 									<li><a href="https://www.facebook.com/piscinesJC/" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
 									<li><a href="https://www.youtube.com/@SpaWater-ca" target="_blank"><i class="fab fa-youtube" ></i></a></li>
-									<li><a href="#"><i class="fab fa-tiktok"></i></a></li>
 									<li><a href="#"><i class="fab fa-instagram"></i></a></li>
 								</ul>
 							</div>
@@ -615,7 +608,6 @@
 								<ul>
 									<li><a href="https://www.facebook.com/piscinesJC/" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
 									<li><a href="https://www.youtube.com/@SpaWater-ca" target="_blank"><i class="fab fa-youtube" ></i></a></li>
-									<li><a href="#"><i class="fab fa-tiktok"></i></a></li>
 									<li><a href="#"><i class="fab fa-instagram"></i></a></li>
 								</ul>
 							</div>
@@ -988,7 +980,6 @@
 							<ul class="social-box">
 								<li class="facebook"><a href="#" class="fab fa-facebook-f"></a></li>
 								<li class="linkedin"><a href="#" class="fab fa-youtube"></a></li>
-								<li class="linkedin"><a href="#" class="fab fa-tiktok"></a></li>
 								<li class="twitter"><a href="#" class="fab fa-instagram"></a></li>
 							</ul>
 						</div>
@@ -1024,7 +1015,6 @@
 							<ul>
 								<li><a href="https://www.facebook.com/piscinesJC/" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
 								<li><a href="https://www.youtube.com/@SpaWater-ca" target="_blank"><i class="fab fa-youtube" ></i></a></li>
-								<li><a href="#"><i class="fab fa-tiktok"></i></a></li>
 								<li><a href="#"><i class="fab fa-instagram"></i></a></li>
 							</ul>
 						</div>
@@ -1120,7 +1110,12 @@
 	<!--==================================================-->
 	<!-- End scrollup section Area -->
 	<!--==================================================-->
-
+	<script>
+		 const el = document.querySelector('[data-i18n="about_section_description"]');
+		if (el) {
+		el.innerHTML = i18next.t('about_section_description', { interpolation: { escapeValue: false } });
+		}
+	</script>
 
 
 	<!-- jquery js -->
